@@ -7,7 +7,7 @@ COPY build_files /
 COPY system_files /system_files
 
 # Base Image
-FROM ghcr.io/ublue-os/bazzite:stable@sha256:8a6c87995b16436bffacdd2618a5daecb4b17ed475078bf29c9a9b86de6a26c2
+FROM ghcr.io/ublue-os/bazzite:stable@sha256:b923f92d5a5b59eb992e269383eba2744601052da9d3d1595f76e79aa6ce2df0
 
 ### [IM]MUTABLE /opt
 # RUN rm /opt && mkdir /opt
