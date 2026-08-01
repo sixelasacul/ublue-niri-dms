@@ -6,4 +6,4 @@ set -ouex pipefail
 cp -avf "/ctx/system_files"/. /
 
 ### Easy install of dms and niri with DankInstall
-curl -fsSL https://install.danklinux.com | sh -s -- -c niri -t ghostty --include-deps dms-greeter -y
+sudo -v && curl -fsSL https://install.danklinux.com | sh -s -- -c niri -t ghostty --include-deps dms-greeter -y
