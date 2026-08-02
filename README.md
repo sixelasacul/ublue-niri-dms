@@ -8,3 +8,4 @@ This repo is using the [ublue-os/image-template](https://github.com/ublue-os/ima
 
 - Use the same repo to build multiple images: bazzite, aurora, bluefin
 - Use chezmoi for apps and configs
+- Import default configs from Niri and DMS (at least for a first setup before chezmoi is pulled)
