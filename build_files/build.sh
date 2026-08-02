@@ -8,7 +8,7 @@ cp -avf "/ctx/system_files"/. /
 ### Can't use DankInstall from here, so running the installation manually
 dnf5 copr enable avengemedia/danklinux
 # uses danksearch instead of dsearch as it is not found, idky
-dnf5 install niri dms dgop danksearch
+dnf5 install niri dms dgop danksearch -y
 
 systemctl --user enable dms
 systemctl --user add-wants niri.service dms
