@@ -30,6 +30,13 @@ jobs:
       packages: write
       id-token: write
 
+    strategy:
+      matrix:
+        image_env_file: ["aurora.env", "bazzite.env"]
+
+    env:
+      ENV_FILE: ${{ matrix.image_env_file }}
+
     steps:
       # These stage versions are pinned by https://github.com/renovatebot/renovate
       - name: Checkout
@@ -158,4 +165,3 @@ jobs:
           DIGEST: ${{ steps.push-image.outputs.digest }}
         run: |
           cosign sign -y --key env://COSIGN_PRIVATE_KEY ${IMAGE_REGISTRY}/${IMAGE_NAME}@${DIGEST}
-

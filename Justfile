@@ -1,6 +1,7 @@
 set dotenv-filename := "${ENV_FILE}" || "image-template.env"
 set dotenv-load
 
+export base_image := env_var("BASE_IMAGE")
 export image_name := env_var("IMAGE_NAME")
 export repo_organization := env_var("REPO_ORGANIZATION")
 export image_desc := env_var("IMAGE_DESC")
@@ -99,6 +100,7 @@ build $target_image=image_name $tag=default_tag:
     set -euox pipefail
 
     BUILD_ARGS=()
+    BUILD_ARGS+=("--build-arg" "BASE_IMAGE={{ base_image }}")
     LABELS=()
     if [[ -z "$(git status -s)" ]]; then
         GIT_SHA=$(git rev-parse --short HEAD)
