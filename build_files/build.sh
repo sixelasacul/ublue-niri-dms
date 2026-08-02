@@ -6,7 +6,7 @@ set -ouex pipefail
 cp -avf "/ctx/system_files"/. /
 
 ### Can't use DankInstall from here, so running the installation manually
-dnf5 copr enable avengemedia/danklinux
+dnf5 copr enable avengemedia/danklinux -y
 # uses danksearch instead of dsearch as it is not found, idky
 dnf5 install niri dms dgop danksearch dms-greeter -y
 
