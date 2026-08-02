@@ -1,0 +1,9 @@
+[Unit]
+Description=Run management client at boot
+
+[Service]
+Type=oneshot
+ExecStart=systemctl --user enable dms ; systemctl --user add-wants niri.service dms ; systemctl --user disable gdm lightdm sddm ; systemctl --user enable greetd
+
+[Install]
+WantedBy=multi-user.target
