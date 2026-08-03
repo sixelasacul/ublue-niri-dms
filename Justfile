@@ -1,4 +1,3 @@
-set dotenv-filename := "${ENV_FILE:bazzite.env}"
 set dotenv-load
 
 export base_image := env_var("BASE_IMAGE")
