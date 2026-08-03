@@ -2,7 +2,10 @@
 
 systemctl --user enable dms
 systemctl --user add-wants niri.service dms
-systemctl --user disable gdm lightdm sddm plasmalogin
+systemctl --user disable gdm
+systemctl --user disable lightdm
+systemctl --user disable sddm
+systemctl --user disable plasmalogin
 systemctl --user enable greetd
 
 cp -r /usr/lib/default-config/niri ~/.config
