@@ -8,6 +8,8 @@ systemctl --user disable sddm
 systemctl --user disable plasmalogin
 systemctl --user enable greetd
 
+rm /etc/xdg/autostart/org.kde.xwaylandvideobridge.desktop || echo 'xwaylandvideobridge already removed'
+
 cp -r /usr/lib/default-config/niri ~/.config
 
 # normally this uses sudo, not sure how that'd work in a service
