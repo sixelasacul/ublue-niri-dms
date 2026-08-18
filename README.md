@@ -1,3 +1,5 @@
+⚠️ Archived project as I moved away from Bazzite to CachyOS. Still may work.
+
 # ublue-niri-dms
 
 > This repo is using the [ublue-os/image-template](https://github.com/ublue-os/image-template) to easily build it and maintain it.
